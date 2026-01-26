@@ -1,4 +1,4 @@
-n = int(input("Введите кол-во ступенек n: "))
+n = int(input('Введите кол-во ступенек n: '))
 
 if 1 <= n <= 9:
     for i in range(1, n + 1):
@@ -6,4 +6,4 @@ if 1 <= n <= 9:
             print(j, end="")
         print()
 else:
-    print("n должно быть от 1 до 9")
+    print('n должно быть от 1 до 9')
