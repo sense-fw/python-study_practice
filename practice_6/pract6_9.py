@@ -1,20 +1,17 @@
 A = []
-n = int(input('Введите количество элементов списка: '))
+n = int(input('Введите количество элементов массива: '))
 
-print('Введите элементы списка:')
+print('Введите вещественные элементы массива:')
 for i in range(n):
-    A.append(int(input(f'Элемент {i}: ')))
+    A.append(float(input(f'Элемент {i}: ')))
 
-found = False
+min_abs = A[0]
+for x in A:
+    if abs(x) < abs(min_abs):
+        min_abs = x
 
-for i in range(n):
-    for j in range(i + 1, n):
-        if A[i] == A[j]:
-            print('Повторяющийся элемент:', A[i])
-            found = True
-            break
-    if found:
-        break
+print('Минимальный по модулю элемент:', min_abs)
 
-if not found:
-    print('Повторяющихся элементов нет')
+print('Массив в обратном порядке:')
+for x in A[::-1]:
+    print(x, end=' ')

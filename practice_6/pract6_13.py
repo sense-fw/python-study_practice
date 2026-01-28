@@ -5,16 +5,13 @@ print('Введите элементы массива:')
 for i in range(n):
     A.append(int(input(f'Элемент {i}: ')))
 
-max_index = 0
-min_index = 0
+found = False
 
-for i in range(1, n):
-    if A[i] > A[max_index]:
-        max_index = i
-    if A[i] < A[min_index]:
-        min_index = i
+for i in range(n):
+    for j in range(i + 1, n):
+        if A[i] == A[j]:
+            print(f'Повторяющийся элемент: {A[i]}, индексы: {i}, {j}')
+            found = True
 
-A[max_index], A[min_index] = A[min_index], A[max_index]
-
-print('Массив после замены максимального и минимального элементов:')
-print(A)
+if not found:
+    print('Повторяющихся элементов нет')

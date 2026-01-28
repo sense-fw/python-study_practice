@@ -1,17 +1,18 @@
 A = []
-n = int(input('Введите количество элементов массива: '))
+n = int(input('Введите количество элементов списка: '))
 
-print('Введите элементы массива:')
+print('Введите элементы списка:')
 for i in range(n):
     A.append(int(input(f'Элемент {i}: ')))
 
-found = False
+min_odd = None
 
-for i in range(n):
-    for j in range(i + 1, n):
-        if A[i] == A[j]:
-            print(f'Повторяющийся элемент: {A[i]}, индексы: {i}, {j}')
-            found = True
+for x in A:
+    if x % 2 != 0:  
+        if min_odd is None or x < min_odd:
+            min_odd = x
 
-if not found:
-    print('Повторяющихся элементов нет')
+if min_odd is not None:
+    print('Наименьший нечётный элемент списка:', min_odd)
+else:
+    print('В списке нет нечётных элементов')

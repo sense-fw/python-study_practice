@@ -1,18 +1,20 @@
 A = []
-n = int(input('Введите количество элементов списка: '))
+n = int(input('Введите количество элементов массива: '))
 
-print('Введите элементы списка:')
+print('Введите элементы массива:')
 for i in range(n):
     A.append(int(input(f'Элемент {i}: ')))
 
-repeats = []
+max_index = 0
+min_index = 0
 
-for i in range(n):
-    for j in range(i + 1, n):
-        if A[i] == A[j] and A[i] not in repeats:
-            repeats.append(A[i])
+for i in range(1, n):
+    if A[i] > A[max_index]:
+        max_index = i
+    if A[i] < A[min_index]:
+        min_index = i
 
-if repeats:
-    print('Повторяющиеся элементы:', repeats)
-else:
-    print('Повторяющихся элементов нет')
+A[max_index], A[min_index] = A[min_index], A[max_index]
+
+print('Массив после замены максимального и минимального элементов:')
+print(A)
