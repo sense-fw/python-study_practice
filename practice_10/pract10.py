@@ -7,7 +7,7 @@ root.title('Шарова Дарья Сергеевна')
 notebook = ttk.Notebook(root)
 notebook.pack(expand=True, fill='both', padx=10, pady=10)
 
-# ------------------ Вкладка 1: Калькулятор ------------------
+# вкладка 1: калькулятор 
 tab1 = ttk.Frame(notebook)
 notebook.add(tab1, text='Калькулятор')
 
@@ -54,7 +54,7 @@ def clear_calculator():
 tk.Button(tab1, text='Вычислить', command=calculate).grid(row=3, column=0, pady=10)
 tk.Button(tab1, text='Очистить', command=clear_calculator).grid(row=3, column=1, pady=10)
 
-# ------------------ Вкладка 2: Чекбоксы ------------------
+# вкладка 2: чекбоксы 
 tab2 = ttk.Frame(notebook)
 notebook.add(tab2, text='Чекбоксы')
 
@@ -87,7 +87,7 @@ def clear_checkboxes():
 tk.Button(tab2, text='Показать выбор', command=show_selection).pack(pady=5)
 tk.Button(tab2, text='Очистить', command=clear_checkboxes).pack(pady=5)
 
-# ------------------ Вкладка 3: Работа с текстом ------------------
+# вкладка 3: работа с текстом 
 tab3 = ttk.Frame(notebook)
 notebook.add(tab3, text='Текст')
 
