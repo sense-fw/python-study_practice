@@ -40,8 +40,8 @@ def transpose_matrix(A):
             T[j][i] = A[i][j]
     return T
 
-input_file = r'C:\Users\777\Desktop\Учеба\1 КУРС\папка с кодом\files_code\Sharova_ZIT-251_vvod.txt'
-output_file = r'C:\Users\777\Desktop\Учеба\1 КУРС\папка с кодом\files_code\Sharova_ZIT-251_vivod.txt'
+input_file = r'C:\Users\777\Documents\Prprojects\python-study_practice\practice_9\vvod.txt'
+output_file = r'C:\Users\777\Documents\Prprojects\python-study_practice\practice_9\vivod.txt'
 
 A, k = read_matrix_from_file(input_file)
 
